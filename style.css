@@ -1,0 +1,228 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  width: 100%;
+  background-color: #000;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-height: 500px) {
+  body {
+    margin: 25% 0 25% 0;
+  }
+}
+
+.envelope {
+  width: 15rem;
+  height: 10rem;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+@media (min-width: 400px) and (max-width: 600px) {
+  .envelope {
+    width: 20rem;
+    height: 15rem;
+  }
+}
+
+@media (min-width: 600px) {
+  .envelope {
+    width: 25rem;
+    height: 20rem;
+  }
+}
+
+@media (min-width: 600px) and (min-height: 600px) {
+  .envelope {
+    bottom: 20%;
+  }
+}
+
+.envelope__papel-frontal {
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  border-radius: 0.7rem;
+  border: 0.35rem solid #967b5c;
+  background-color: #ba9872;
+  clip-path: polygon(100% 0%, 50% 70%, 0% 0%, 0% 100%, 100% 100%);
+  z-index: 300;
+}
+
+.envelope__papel-traseiro {
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  border-radius: 0.7rem;
+  background-color: #967b5c;
+  clip-path: polygon(0% 0%, 100% 0%, 90% 100%, 0% 90%);
+  z-index: 100;
+}
+
+.envelope__papel-superior {
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  left: 0;
+  position: relative;
+  border-radius: 0.7rem;
+  background-color: #967b5c;
+  z-index: 400;
+  clip-path: polygon(0% 0%, 100% 0%, 50% 81%);
+}
+
+.envelope__adesivo {
+  width: 100%;
+  height: 20%;
+  position: absolute;
+  margin: auto;
+  top: 30%;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 400;
+  background-image: url("https://www.freepnglogos.com/uploads/heart-png/emoji-heart-33.png");
+  background-color: #f9f9f9;
+  border: 0.3rem solid #e2e2e2;
+  background-size: 2rem;
+  background-position: center;
+}
+
+@media (max-width: 400px) {
+  .envelope__adesivo {
+    background-size: 1.2rem;
+  }
+}
+
+@media (min-width: 600px) {
+  .envelope__adesivo {
+    height: 15%;
+  }
+}
+
+.envelope__falso-adesivo {
+  width: 20%;
+  height: 20%;
+  position: absolute;
+  margin: auto;
+  top: 30%;
+  left: 80%;
+  bottom: 0;
+  right: 0;
+  z-index: 300;
+  background-image: url("https://www.freepnglogos.com/uploads/heart-png/emoji-heart-33.png");
+  background-color: #f9f9f9;
+  border: 0.3rem solid #e2e2e2;
+  background-size: 2rem;
+  background-position: center;
+}
+
+@media (max-width: 400px) {
+  .envelope__falso-adesivo {
+    background-size: 1.2rem;
+  }
+}
+
+@media (min-width: 600px) {
+  .envelope__falso-adesivo {
+    height: 15%;
+  }
+}
+
+.envelope__conteudo {
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  z-index: 200;
+}
+
+.notas-de-amor {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nota {
+  width: 95%;
+  height: 30%;
+  background-color: #f9f9f9;
+  position: absolute;
+  overflow: hidden;
+  transition: height 0.5s, opacity 0.25s;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+.nota:nth-child(1) {
+  bottom: 60%;
+}
+
+.nota:nth-child(2) {
+  bottom: 40%;
+}
+
+.nota:nth-child(3) {
+  bottom: 20%;
+}
+
+.nota:hover {
+  cursor: pointer;
+  height: 45%;
+}
+
+.nota__texto {
+  font-family: "Sofia";
+  padding: 1rem;
+}
+
+.nota__texto p {
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+@media (min-width: 300px) and (max-width: 600px) {
+  .nota__texto p {
+    font-size: 1.025rem;
+  }
+}
+
+@media (min-width: 600px) {
+  .nota__texto p {
+    font-size: 1.15rem;
+  }
+}
+
+.tesoura {
+  cursor: url("./cursor.png"), pointer;
+}
+
+.tesoura:active {
+  cursor: url("./cursor.png"), pointer;
+}
+
+.cursor {
+  cursor: pointer;
+}
